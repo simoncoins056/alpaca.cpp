@@ -15,6 +15,7 @@ build-sanitize-addr/
 build-sanitize-thread/
 
 models/*
+*.bin
 
 /main
 /quantize
@@ -25,3 +26,14 @@ compile_commands.json
 
 .envrc
 .direnv/
+# Windows CMake files
+*.vcxproj
+*.filters
+*.cmake
+*.sln
+x64/
+Debug/
+Release/
+CMakeFiles/
+CMakeCache.txt
+*.dir/
