@@ -35,14 +35,17 @@ jobs:
 
     steps:
       - name: Clone
+        id: checkout
         uses: actions/checkout@v1
 
       - name: Dependencies
+        id: depends
         run: |
           sudo apt-get update
           sudo apt-get install build-essential
 
       - name: Build
+        id: make_build
         run: |
           make
 
@@ -51,13 +54,16 @@ jobs:
 
     steps:
       - name: Clone
+        id: checkout
         uses: actions/checkout@v1
 
       - name: Dependencies
+        id: depends
         run: |
           brew update
 
       - name: Build
+        id: make_build
         run: |
           make
 
